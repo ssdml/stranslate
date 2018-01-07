@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'windows/mainwindow.ui'
+# Form implementation generated from reading ui file 'mainwindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.9
 #
@@ -24,6 +24,11 @@ class Ui_MainWindow(object):
         self.translated_text = QtWidgets.QTextBrowser(self.centralWidget)
         self.translated_text.setGeometry(QtCore.QRect(20, 150, 491, 111))
         self.translated_text.setObjectName("translated_text")
+        self.language_select = QtWidgets.QComboBox(self.centralWidget)
+        self.language_select.setGeometry(QtCore.QRect(20, 300, 131, 31))
+        self.language_select.setObjectName("language_select")
+        self.language_select.addItem("")
+        self.language_select.addItem("")
         MainWindow.setCentralWidget(self.centralWidget)
         self.statusBar = QtWidgets.QStatusBar(MainWindow)
         self.statusBar.setObjectName("statusBar")
@@ -41,4 +46,6 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.language_select.setItemText(0, _translate("MainWindow", "на русский", "RU"))
+        self.language_select.setItemText(1, _translate("MainWindow", "на английский", "EN"))
 

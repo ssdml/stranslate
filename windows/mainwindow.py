@@ -29,8 +29,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def translate(self):
         text = self.input_text.toPlainText().strip()
+        language = "ru"
         if text:
-            self.translated_text.setText(self._translator.translate(text))
+            if (self.language_select.currentIndex() == 1):
+                language = "en"
+            self.translated_text.setText(self._translator.translate(text, language))
 
     def moveToCenter(self):
         qtRectangle = self.frameGeometry()
