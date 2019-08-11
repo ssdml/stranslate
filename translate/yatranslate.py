@@ -11,7 +11,7 @@ class YaTranslate():
         self.key = 'key=' + key
 
     def get_response(self, url_param, method="GET"):
-        return json.loads(self.connect(url_param, method="GET"))
+        return json.loads(self.connect(url_param, method="GET").decode('utf-8'))
 
     def connect(self, url_param, method="GET"):
         html = ''
